@@ -17,7 +17,6 @@ export default class Mobileblog extends Component {
     return (
       <View style={styles.container}>
         <Text>Hello World</Text>
-        <Text>This is another text which i just want to have a look on how it really feels to have a nice look</Text>
       </View>
     );
   }
