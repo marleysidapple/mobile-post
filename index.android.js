@@ -32,6 +32,9 @@ export default class Mobileblog extends Component {
 }
 
 const styles = StyleSheet.create({
+   baseText: {
+    fontFamily: 'Open Sans',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
