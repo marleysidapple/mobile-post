@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import Header from './components/header';
 import {
   AppRegistry,
   StyleSheet,
@@ -12,11 +13,12 @@ import {
   View
 } from 'react-native';
 
-export default class Mobileblog extends Component {
+class Mobileblog extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello World</Text>
+        <Header txt ="hello"/>
+        <Text style={styles.welcome}>Hello World Over There</Text>
       </View>
     );
   }
@@ -34,6 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
+  	color: '#FE9804',
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
@@ -44,6 +47,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default Mobileblog;
 
 
 AppRegistry.registerComponent('Mobileblog', () => Mobileblog);
