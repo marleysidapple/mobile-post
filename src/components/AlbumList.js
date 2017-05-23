@@ -4,6 +4,7 @@ import {
 	Text
 } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 
 class Albumlist extends Component {
@@ -30,7 +31,8 @@ class Albumlist extends Component {
 	
 		//key must be unique. Since there are no id, so passing url as a unique key
 		 return this.state.albums.map(alb => 
-		 	<Text key={alb.url}>{alb.title}</Text>
+		 	<AlbumDetail key={alb.url} name={alb.title} artist={alb.artist}/>
+		 	//<Text key={alb.url}>{alb.title}</Text>
 		 );
 	}
 
