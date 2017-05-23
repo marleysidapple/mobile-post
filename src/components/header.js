@@ -14,7 +14,7 @@ class Header extends Component {
 
 	render(){
 		return (
-				<Text>Albums {this.props.txt}</Text>
+				<Text>Albums {this.props.txt} {this.props.anothertxt}</Text>
 			);
 	}
 

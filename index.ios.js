@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import Header from './components/header';
+import Header from './src/components/header';
 import {
   AppRegistry,
   StyleSheet,
@@ -17,7 +17,7 @@ class Mobileblog extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header txt ="hello"/>
+        <Header txt ="hello" anothertxt="just another"/>
         <Text style={styles.welcome}>Hello World Over There</Text>
       </View>
     );
