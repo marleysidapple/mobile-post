@@ -15,38 +15,23 @@ import {
 
 class Mobileblog extends Component {
   render() {
+  	//in order to render text. Just wrap the content inside <Text></Text> tag. 
     return (
-      <View style={styles.container}>
-        <Header txt ="hello" anothertxt="just another"/>
-        <Text style={styles.welcome}>Hello World Over There</Text>
+      <View>
+        <Header title ={'Albums'}/>
       </View>
+
     );
   }
 }
 
 
-const styles = StyleSheet.create({
+const styles = {
   baseText: {
     fontFamily: 'Open Sans',
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-  	color: '#FE9804',
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+  }
+};
+
 
 export default Mobileblog;
 
