@@ -18,7 +18,7 @@ class Mobileblog extends Component {
   render() {
   	//in order to render text. Just wrap the content inside <Text></Text> tag. 
     return (
-      <View>
+      <View style = {styles.container}>
         <Header title ={'Albums'}/>
         <Albumlist/>
       </View>
@@ -31,6 +31,9 @@ class Mobileblog extends Component {
 const styles = {
   baseText: {
     fontFamily: 'Open Sans',
+  },
+  container: {
+  	flex: 1
   }
 };
 

@@ -9,7 +9,6 @@ import AlbumDetail from './AlbumDetail';
 
 class Albumlist extends Component {
 
-	
 
 	constructor(props){
 		super(props);
@@ -38,14 +37,23 @@ class Albumlist extends Component {
 
 
 	render(){
-		//console.log(this.state.albums);
 		return (
-			<View>
-				<Text>This is album list</Text>
+			<View style={styles.listContainer}>
 				{this.renderAlbums()}
 			</View>
 		);
 	}
 }
+
+
+const styles = {
+	listContainer : {
+		alignItems: 'flex-start',
+		justifyContent: 'flex-start',
+		paddingTop: 20,
+		//backgroundColor: '#c4bcbc'
+	}
+};
+
 
 export default Albumlist;

@@ -25,6 +25,7 @@ class Header extends Component {
 
 const styles = {
     headerContainer: {
+    	flexDirection: 'row',
 	  	backgroundColor: '#f8f8f8',
 	  	justifyContent: 'center',
 	  	alignItems: 'center',

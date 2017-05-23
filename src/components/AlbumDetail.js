@@ -8,11 +8,19 @@ class AlbumDetail extends Component {
 
 	render(){
 		return (
-			<View>
-				<Text>{this.props.name}</Text>
-				<Text>{this.props.artist}</Text>
-			</View>
+				<View style={styles.detailWrapper}>
+					<Text>{this.props.name}</Text>
+					<Text>{this.props.artist}</Text>
+				</View>
 		);
+	}
+}
+
+const styles = {
+	detailWrapper : {
+		height: 60,
+		backgroundColor: 'powderblue',
+		
 	}
 }
 
