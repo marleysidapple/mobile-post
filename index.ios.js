@@ -5,7 +5,8 @@
  */
 
 import React, { Component } from 'react';
-import Header from './src/components/header';
+import Header from './src/components/Header';
+import Albumlist from './src/components/AlbumList';
 import {
   AppRegistry,
   StyleSheet,
@@ -19,6 +20,7 @@ class Mobileblog extends Component {
     return (
       <View>
         <Header title ={'Albums'}/>
+        <Albumlist/>
       </View>
 
     );
