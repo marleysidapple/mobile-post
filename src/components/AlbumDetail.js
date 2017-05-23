@@ -19,7 +19,6 @@ class AlbumDetail extends Component {
 const styles = {
 	detailWrapper : {
 		height: 60,
-		backgroundColor: 'powderblue',
 		
 	}
 }
