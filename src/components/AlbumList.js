@@ -24,14 +24,19 @@ class Albumlist extends Component {
 
 
 	renderAlbums(){
-		return this.state.albums.map(
-			album => <Text>{album.title}</Text>
-		);
+		// return this.state.albums.map(
+		// 	album => <Text>{album.title}</Text>
+		// );
+	
+		//key must be unique. Since there are no id, so passing url as a unique key
+		 return this.state.albums.map(alb => 
+		 	<Text key={alb.url}>{alb.title}</Text>
+		 );
 	}
 
 
 	render(){
-		console.log(this.state.albums);
+		//console.log(this.state.albums);
 		return (
 			<View>
 				<Text>This is album list</Text>
