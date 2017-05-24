@@ -9,8 +9,8 @@ class AlbumDetail extends Component {
 	render(){
 		return (
 				<View style={styles.detailWrapper}>
-					<Text>{this.props.name}</Text>
-					<Text>{this.props.artist}</Text>
+					<Text style={styles.songTitle}>{this.props.name}</Text>
+					<Text style={styles.artistName}>{this.props.artist}</Text>
 				</View>
 		);
 	}
@@ -18,7 +18,15 @@ class AlbumDetail extends Component {
 
 const styles = {
 	detailWrapper : {
-		height: 60,
+		height: 40,
+		alignItems: 'flex-start',
+	},
+
+	songTitle: {
+
+	},
+
+	artistName: {
 		
 	}
 }

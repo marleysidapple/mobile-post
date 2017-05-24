@@ -15,10 +15,10 @@ class Header extends Component {
 	render(){
 		//get the props by doing {this.props.propname}
 		return (
-				<View style={styles.headerContainer}>
-					<Text style={styles.links}>More</Text>
-					<Text style={styles.welcome}>{this.props.title}</Text>
-					<Text style={styles.links}>Back</Text>
+				<View style={styles.topNavBarContainer}>
+					<Text style={styles.navBarButtons}>More</Text>
+					<Text style={styles.navBarTitle}>{this.props.title}</Text>
+					<Text style={styles.navBarButtons}>Back</Text>
 				</View>
 			);
 	}
@@ -26,27 +26,28 @@ class Header extends Component {
 }
 
 const styles = {
-    headerContainer: {
+    topNavBarContainer: {
     	flexDirection: 'row',
 	  	backgroundColor: '#f8f8f8',
 	  	//justifyContent: 'center',
 	  	//alignItems: 'center',
-	  	height: 60,
-	  	paddingTop: 20,
+	  	height: 64,
+	  	paddingTop: 30,
 	  	shadowColor: '#000',
 	  	shadowOffset: {width: 0, height: 2},
 	  	shadowOpacity: 0.2,
 	  	elevation: 2,
 	  	position: 'relative'
 	  },
-	welcome: {
+	navBarTitle: {
 		flex: 1,
-	  	fontSize: 16,
+	  	//fontSize: 16,
+	  	fontWeight: 'bold',
 	  	color: '#43536F',
 	  	textAlign: 'center'
 	  },
 
-	links: {
+	navBarButtons: {
 		textAlign:'center',
     	width: 64,
     	color: '#43536F',

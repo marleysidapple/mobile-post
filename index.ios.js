@@ -33,7 +33,8 @@ const styles = {
     fontFamily: 'Open Sans',
   },
   container: {
-  	flex: 1
+  	flex: 1,
+  	backgroundColor: '#f0f0f0'
   }
 };
 
