@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import Card from './Card';
 
 class AlbumDetail extends Component {
 	constructor(props){
@@ -7,11 +8,13 @@ class AlbumDetail extends Component {
 	}
 
 	render(){
+		//we can enclose HTML in a normal <View> tag as well. 
+		//we created a reusable component called <Card> and enclosed all the view code inside it
 		return (
-				<View style={styles.detailWrapper}>
+				<Card>
 					<Text style={styles.songTitle}>{this.props.name}</Text>
 					<Text style={styles.artistName}>{this.props.artist}</Text>
-				</View>
+				</Card>
 		);
 	}
 }
@@ -21,14 +24,6 @@ const styles = {
 		height: 40,
 		alignItems: 'flex-start',
 	},
-
-	songTitle: {
-
-	},
-
-	artistName: {
-		
-	}
 }
 
 export default AlbumDetail;

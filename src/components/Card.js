@@ -3,10 +3,15 @@ import {Text, View} from 'react-native';
 
 class Card extends Component {
 
+
+	constructor(props){
+		super(props);
+	}
+
 	render(){
 		return (
 			<View style={styles.cardContainerStyle}>
-
+				{this.props.children}
 			</View>
 		);
 	}

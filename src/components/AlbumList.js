@@ -48,9 +48,9 @@ class Albumlist extends Component {
 
 const styles = {
 	listContainer : {
-		flex: 1,
-		alignItems: 'flex-start',
-		padding: 10
+		//flex: 1,
+		//alignItems: 'flex-start',
+		//padding: 10
 
 	}
 };
