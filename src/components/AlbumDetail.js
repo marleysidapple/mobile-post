@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import Card from './Card';
+import CardSection from './CardSection';
 
 class AlbumDetail extends Component {
 	constructor(props){
@@ -12,8 +13,19 @@ class AlbumDetail extends Component {
 		//we created a reusable component called <Card> and enclosed all the view code inside it
 		return (
 				<Card>
-					<Text style={styles.songTitle}>{this.props.name}</Text>
-					<Text style={styles.artistName}>{this.props.artist}</Text>
+					<CardSection>
+						<View>
+							<Text>For ims</Text>
+						</View>
+
+						<View>
+							<Text>Title 1</Text>
+							<Text>Title 2</Text>
+						</View>
+
+						<Text style={styles.songTitle}>{this.props.name}</Text>
+						<Text style={styles.songTitle}>{this.props.name}</Text>
+					</CardSection>
 				</Card>
 		);
 	}
