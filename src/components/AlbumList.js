@@ -38,6 +38,8 @@ class Albumlist extends Component {
 		 );
 		*/
 
+		//whenever there is scrollview, the parent view containing scrollview should have a style of flex: 1
+
 		return this.state.albums.map(alb => 
 		 	<AlbumDetail key={alb.url} allalbums = {alb}/>
 		 );
@@ -46,11 +48,9 @@ class Albumlist extends Component {
 
 	render(){
 		return (
-				<View style={styles.listContainer}>
-					<ScrollView>
+					<ScrollView style={styles.listContainer}>
 						{this.renderAlbums()}
 					</ScrollView>
-				</View>
 		);
 	}
 }
