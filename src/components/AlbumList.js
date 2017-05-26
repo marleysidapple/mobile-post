@@ -29,9 +29,16 @@ class Albumlist extends Component {
 		// );
 	
 		//key must be unique. Since there are no id, so passing url as a unique key
+		// or we can pass whole object
+		
+		/*
 		 return this.state.albums.map(alb => 
 		 	<AlbumDetail key={alb.url} name={alb.title} artist={alb.artist}/>
-		 	//<Text key={alb.url}>{alb.title}</Text>
+		 );
+		*/
+
+		return this.state.albums.map(alb => 
+		 	<AlbumDetail key={alb.url} allalbums = {alb}/>
 		 );
 	}
 

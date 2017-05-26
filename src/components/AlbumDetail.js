@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 
@@ -9,22 +9,24 @@ class AlbumDetail extends Component {
 	}
 
 	render(){
+
+		const { title, artist, thumbnail_image } = this.props.allalbums;
+
 		//we can enclose HTML in a normal <View> tag as well. 
 		//we created a reusable component called <Card> and enclosed all the view code inside it
 		return (
 				<Card>
 					<CardSection>
 						<View>
-							<Text>For ims</Text>
+							<Image style={styles.thumbnailStyle} source={{uri: this.props.allalbums.thumbnail_image}} />
 						</View>
 
-						<View>
-							<Text>Title 1</Text>
-							<Text>Title 2</Text>
+						<View style={styles.detailWrapper}>
+							<Text style={styles.songTitle}>{artist}</Text>
+							<Text style={styles.songTitle}>{title}</Text>
 						</View>
 
-						<Text style={styles.songTitle}>{this.props.name}</Text>
-						<Text style={styles.songTitle}>{this.props.name}</Text>
+						
 					</CardSection>
 				</Card>
 		);
@@ -33,9 +35,15 @@ class AlbumDetail extends Component {
 
 const styles = {
 	detailWrapper : {
-		height: 40,
-		alignItems: 'flex-start',
+		flexDirection: 'column',
+		justifyContent: 'space-around'
 	},
+
+	thumbnailStyle :{
+		height: 50,
+		width: 50,
+		borderRadius: 10
+	}
 }
 
 export default AlbumDetail;
