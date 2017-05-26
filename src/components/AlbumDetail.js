@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Linking, Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
@@ -11,7 +11,7 @@ class AlbumDetail extends Component {
 
 	render(){
 
-		const { title, artist, thumbnail_image, image } = this.props.allalbums;
+		const { title, artist, thumbnail_image, image, url } = this.props.allalbums;
 
 		//we can enclose HTML in a normal <View> tag as well. 
 		//we created a reusable component called <Card> and enclosed all the view code inside it
@@ -33,7 +33,7 @@ class AlbumDetail extends Component {
 					</CardSection>
 
 					<CardSection>
-						<Button onPress={() => console.log(title)}/>
+						<Button onPressedAction={() => Linking.openURL(url)} text={'Buy Now'}/>
 					</CardSection>
 				</Card>
 		);
