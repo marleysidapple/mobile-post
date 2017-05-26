@@ -33,7 +33,7 @@ class AlbumDetail extends Component {
 					</CardSection>
 
 					<CardSection>
-						<Button/>
+						<Button onPress={() => console.log(title)}/>
 					</CardSection>
 				</Card>
 		);
